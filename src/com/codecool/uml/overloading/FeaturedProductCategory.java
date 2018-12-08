@@ -6,4 +6,9 @@ public class FeaturedProductCategory extends ProductCategory {
 
     private Date startDate;
     private Date endDate;
+
+    public void schedule(Date startDate, Date endDate) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 }
