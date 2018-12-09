@@ -71,6 +71,28 @@ public class Product {
         this.supplier = supplier;
     }
 
+    public List<Product> getAllProductsBy(ProductCategory productCategory) {
+        List<Product> filterResult = new ArrayList<>();
+        for (Product product :
+                productList) {
+            if (product.productCategory.equals(productCategory)) {
+                filterResult.add(product);
+            }
+        }
+        return filterResult;
+    }
+
+    public List<Product> getAllProductsBy(Supplier supplier) {
+        List<Product> filterResult = new ArrayList<>();
+        for (Product product :
+                productList) {
+            if (product.supplier.equals(supplier)) {
+                filterResult.add(product);
+            }
+        }
+        return filterResult;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
