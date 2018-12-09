@@ -2,10 +2,10 @@ package com.codecool.uml.overloading;
 
 public class ProductCategory {
 
-    private  int id;
-    private  String name;
-    private String department;
-    private String description;
+    protected int id;
+    protected String name;
+    protected String department;
+    protected String description;
 
     public int getId() {
         return id;
@@ -33,5 +33,15 @@ public class ProductCategory {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("id=").append(id);
+        sb.append(",name=").append(name);
+        sb.append(",department=").append(department);
+        sb.append(",description=").append(description);
+        return sb.toString();
     }
 }

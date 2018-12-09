@@ -25,4 +25,13 @@ public class Supplier {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("id=").append(id);
+        sb.append(",name=").append(name);
+        sb.append(",description=").append(description);
+        return sb.toString();
+    }
 }

@@ -70,4 +70,16 @@ public class Product {
     public void setSupplier(Supplier supplier) {
         this.supplier = supplier;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("id=").append(id);
+        sb.append(",name=").append(name);
+        sb.append(",defaultPrice=").append(defaultPrice);
+        sb.append(",defaultCurrency=").append(defaultCurrency);
+        sb.append(",productCategory=").append(productCategory);
+        sb.append(",supplier=").append(supplier);
+        return sb.toString();
+    }
 }
